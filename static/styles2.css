@@ -1,0 +1,145 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure it stays behind other content */
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6); /* White glow effect */
+  width: 100%;
+  max-width: 700px;
+  min-height: 300px; /* Ensure sufficient height */
+  display: flex; /* Flexbox for centering */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.choose-file-btn,
+button {
+  width: 100%; /* Ensure both buttons take the same width */
+  padding: 10px 20px; /* Uniform padding for better appearance */
+  margin: 15px 0; /* Increased vertical spacing between buttons */
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.choose-file-btn {
+  background-color: #28a745; /* Green background for "Choose Image" */
+}
+
+.choose-file-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+button {
+  background-color: #007BFF; /* Blue background for "Generate Story" */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+input[type="file"] {
+  display: none; /* Hide the default file input */
+}
+
+.result-card {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  flex-grow: 2;
+  height: 400px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.result-card::-webkit-scrollbar {
+  display: none;
+}
+
+.result-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Georgia', serif;
+}
+
+.result-card p {
+  font-size: 1rem;
+  color: #555;
+  font-family: 'Verdana', sans-serif;
+}
+
+.result-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 25px;
+  }
+  .result-card {
+      padding: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+      width: 100%;
+      padding: 15px;
+  }
+  .result-card {
+      width: 100%;
+  }
+}

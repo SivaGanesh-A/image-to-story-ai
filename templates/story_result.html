@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Story</title>
+    <link rel="stylesheet" href="static/styles3.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="bg-video">
+        <source src="/static/uploads/night.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <div class="result-card">
+            <!-- Text Content -->
+            <div class="text-content">
+                <h2>Caption:</h2>
+                <p>{{ caption }}</p>
+                <h2>Story:</h2>
+                <p>{{ story }}</p>
+            </div>
+            <!-- Image -->
+            <img src="{{ image_path }}" alt="Uploaded Image">
+        </div>
+    </div>
+</body>
+</html>

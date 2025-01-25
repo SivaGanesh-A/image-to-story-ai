@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Story AI</title>
+    <link rel="stylesheet" href="static/styles2.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="bg-video">
+        <source src="/static/uploads/sunset.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <h1>Image to Story Generator</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <!-- Custom "Choose File" button -->
+             <br><br><br>
+            <label for="image" class="choose-file-btn">Choose Image</label>
+            <input type="file" name="image" id="image" required>
+
+            <button type="submit">Generate Story</button>
+        </form>
+    </div>
+
+    {% if image_path %}
+    <div class="result-card">
+        <h2>Caption:</h2>
+        <p>{{ caption }}</p>
+        <h2>Story:</h2>
+        <p>{{ story }}</p>
+        <img src="{{ image_path }}" alt="Uploaded Image">
+    </div>
+    {% endif %}
+</body>
+
+</html>
